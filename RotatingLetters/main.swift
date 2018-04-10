@@ -11,7 +11,8 @@ import Foundation
 //INPUT
 
 //Loop forever until we get good input
-while 1 == 1 {
+var vaildInput = "" //outside the loop
+prompt: while 1 == 1 {
     
     //Prompt the user
     print("Input word is?")
@@ -34,11 +35,30 @@ while 1 == 1 {
         
     }
     
+    //test #3: check to ensure there is only uppercase letters and no spaces
+    checking: for individualCharacter in givenInput {
+        
+        //DEBUG: print the character we are looking at
+        print(individualCharacter)
+        
+        //check the character
+        switch individualCharacter {
+        case "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z":
+         continue checking    //ok, go to next character in the string
+        default:
+            break prompt    //stop looking, weve found bad input
+        }
+        
+    }
+    
     // if we got to this point, we know the input is good
+    vaildInput = givenInput
     break   //quit the while loop and begin the PROCESS section
     
 }
 
+//PROCESS
+print(validInput)
 
 
 
