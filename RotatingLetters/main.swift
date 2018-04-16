@@ -11,7 +11,7 @@ import Foundation
 //INPUT
 
 //Loop forever until we get good input
-var vaildInput = "" //outside the loop
+var validInput = "" //outside the loop
 prompt: while 1 == 1 {
     
     //Prompt the user
@@ -52,17 +52,37 @@ prompt: while 1 == 1 {
     }
     
     // if we got to this point, we know the input is good
-    vaildInput = givenInput
+    validInput = givenInput
     break   //quit the while loop and begin the PROCESS section
     
 }
 
 //PROCESS
-print(validInput)
+// we now have valid input that can be processed according to the remaining requirments of the scenario
+
+var countOfGoodLetters = 0
+for letter in validInput {
+    
+    //check each letter to make sure it's IHOZXN
+    print(letter)
+    if letter == "I" || letter == "H" || letter == "O" || letter == "S" || letter == "Z" || letter == "X" || letter == "N" {
+        //good    keep checlking
+        countOfGoodLetters += 1
+        continue
+    } else {
+       
+    }
+    
+    
+}
 
 
-
-
-
+//OUTPUT
+//if we got here, guaranteed this is a word with only acceptable letters
+if  countOfGoodLetters == vaildInput.count {
+    print("YES")
+} else {
+    print("NO")
+}
 
 
