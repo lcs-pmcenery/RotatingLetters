@@ -79,7 +79,7 @@ for letter in validInput {
 
 //OUTPUT
 //if we got here, guaranteed this is a word with only acceptable letters
-if  countOfGoodLetters == vaildInput.count {
+if  countOfGoodLetters == validInput.count {
     print("YES")
 } else {
     print("NO")
